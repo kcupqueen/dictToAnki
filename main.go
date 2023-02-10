@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	words, err := file_parse.ParseWordsFromHtmlFile("./file_parse/test.html")
+	words, err := file_parse.ParseWordsFromHtmlFile("./data/eudict2.html")
 	if err != nil {
 		panic(err)
 	}
