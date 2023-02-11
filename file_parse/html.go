@@ -1,7 +1,6 @@
 package file_parse
 
 import (
-	"fmt"
 	"github.com/anaskhan96/soup"
 	"golang.org/x/net/html"
 	"os"
@@ -58,12 +57,12 @@ func ParseWordsFromHtmlFile(htmlFilePath string) ([]Word, error) {
 			}
 
 		}
-		if word != "" {
+		if word != "" && meaning != "" {
 			words = append(words, Word{
 				Word:    word,
 				Meaning: meaning,
 			})
-			fmt.Println("append word: ", word)
+
 		}
 
 	}
